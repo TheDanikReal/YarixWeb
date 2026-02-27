@@ -1,5 +1,5 @@
 body{
-    background: #000000;
+    background: url("space.gif");
     color: #ffffff;
 }
 
@@ -17,8 +17,8 @@ hr{
     color: #8a2be2;
 }
 
-.bg{
-    background: linear-gradient(to top, #8a2be2, #000000);
+.frame{
+    background: url("frame2.gif");
 }
 
 a{
