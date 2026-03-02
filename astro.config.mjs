@@ -1,12 +1,11 @@
 // @ts-check
-import { defineConfig } from 'astro/config';
+import { defineConfig } from "astro/config";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://thedanikreal.github.io/",
-  base: "/YarixWeb",
-  build: {
-    format: "file"
-  }
+	site: "https://thedanikreal.github.io/",
+	base: "/YarixWeb",
+	build: {
+		format: "file",
+	},
 });
-
