@@ -26,7 +26,7 @@ a{
 }
 
 a:hover{
-    color: white;
+    color: #ffffff;
 }
 
 img{
@@ -45,7 +45,8 @@ hr{
 }
 
 .frame{
-    background: url("frame2.gif");
+    background-color: rgba(128, 0, 255, 0.2);
+    border-radius: 10px;
 }
 
 .pixel{
