@@ -1,28 +1,22 @@
+@font-face {
+  font-family: comic-relief;
+  src: url(comicrelief.ttf);
+}
+
 body{
     background: url("space.gif");
+    font-family: comic-relief;
     color: #ffffff;
+    margin-left: 30px;
+    margin-right: 30px;
 }
 
 h1{
     text-align: center;
 }
 
-.center{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-hr{
-    color: #8a2be2;
-}
-
-.frame{
-    background: url("frame2.gif");
-}
-
-.pixel{
-    image-rendering: pixelated;
+h2{
+    margin-bottom: 30px;
 }
 
 a{
@@ -32,10 +26,38 @@ a{
 }
 
 a:hover{
-    color: white;
+    color: #ffffff;
+}
+
+img{
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+div{
+  border: 3px solid white;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.frame{
+    background-color: rgba(128, 0, 255, 0.2);
+    border-radius: 10px;
+}
+
+.pixel{
+    image-rendering: pixelated;
 }
 
 .back{
     text-align: center;
-    font-size: 20px;
+    margin-top: 20px;
 }
