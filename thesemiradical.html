@@ -1,88 +1,237 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" data-slop-level="1">
     <head>
         <meta charset="UTF-8">
-        <title>Yarix Web</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>The Semiradical | Yarix Web</title>
         <link rel="icon" href="icon.png">
-        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="dist/slopstrap.css">
+        <style>
+            .game-image { width: 100%; max-width: 620px; border-radius: 1rem; }
+            .character-image { width: min(100%, 260px); }
+            .slop-card p:last-child { margin-bottom: 0; }
+            .slop-card audio { width: 100%; margin-top: 0.75rem; }
+            .content-grid { align-items: start; }
+            .feature-list {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 0.65rem;
+                margin-top: 0.75rem;
+            }
+            .feature-item {
+                display: grid;
+                grid-template-columns: 2.25rem minmax(0, 1fr);
+                align-items: center;
+                gap: 0.75rem;
+                min-height: 3.25rem;
+                padding: 0.65rem 0.75rem;
+                border: 1px solid rgba(148, 163, 184, 0.16);
+                border-left: 4px solid #22d3ee;
+                border-radius: 0.75rem;
+                background: rgba(15, 23, 42, 0.55);
+                color: #e2e8f0;
+            }
+            .feature-item:nth-child(2) { border-left-color: #a78bfa; }
+            .feature-item:nth-child(3) { border-left-color: #f472b6; }
+            .feature-icon {
+                display: grid;
+                place-items: center;
+                width: 2.25rem;
+                height: 2.25rem;
+                border-radius: 0.65rem;
+                background: rgba(168, 85, 247, 0.16);
+                box-shadow: 0 0 16px rgba(168, 85, 247, 0.18);
+            }
+            @media (max-width: 760px) {
+                .feature-item {
+                    grid-template-columns: 2.25rem minmax(0, 1fr);
+                    min-width: 0;
+                }
+            }
+        </style>
     </head>
-    
-    <body>
-        <div>
-            <h1>About The Semiradical</h1>
-            <img width="50%" class="center frame" src="thesemiradical-logo.png" alt="The Semiradical logo">
+
+    <body class="slop-body slop-grid-bg">
+        <div class="slop-orb-layer" aria-hidden="true">
+            <div class="slop-orb slop-orb-purple"></div>
+            <div class="slop-orb slop-orb-cyan"></div>
+            <div class="slop-orb slop-orb-pink"></div>
+            <div class="slop-orb slop-orb-emerald"></div>
         </div>
 
-        <div>
-            <h2>Introduction</h2>
-            <p>The Semiradical is a game that I'm planning to work on after finishing other projects. It will be a large project.
-            <br>Also, I'm planning to improve this page and add more information. Drawings on this page aren't what the game's visual style should be.</p>
-        </div>
+        <div class="slop-content-layer">
+            <header class="slop-navbar">
+                <div class="slop-container slop-navbar-inner">
+                    <a class="slop-brand" href="index.html">
+                        <span class="slop-brand-mark">✦</span> Yarix Web
+                    </a>
+                    <span class="slop-status">
+                        <span class="slop-dot slop-dot-green"></span> Project in development
+                    </span>
+                </div>
+            </header>
 
-        <div>
-            <h2>General</h2>
-            <h3>Genre</h3>
-            <p>Fast-paced 2D platformer</p>
-            <h3>Gameplay</h3>
-            <p>You are playing as Yaromir and your goal is to defeat Zinoviy. You will encounter his robots in walkthrough which are the enemies. You will also encounter some big robots which are the bosses.
-            <br>At the finale, you will fight Zinoviy himself.</p>
-            <h3>Key features</h3>
-            <ul>
-                <li>Realistic level design</li>
-                <li>Nonlinear storyline</li>
-                <li>Unique game mechanics of rage and electricity</li>
-            </ul>
-            <h3>Plot</h3>
-            <p>Zinoviy is going to take over the world. Furthermore, he is going to take the whole lectreido race as slaves.
-            <br>However, one of them, Yaromir, is <b>very</b> mad about this. He decides to take risks for freedom.
-            <br>The game is set in Belarus at first quarter of 21st century.</p>
-            <h3>Relation to <a href="altradical.html">ALTRADICAL</a></h3>
-            <p>Both games have Yaromir as main character and other general things. It's because <a href="altradical.html">ALTRADICAL</a> is based on The Semiradical. Despite that, <a href="altradical.html">ALTRADICAL</a> isn't canon.</p>
-        </div>
-        
-        <div>
-            <h2>Characters</h2>
-            <h3>Yaromir</h3>
-            <img width="25%" class="frame" src="thesemiradical-yaromir.png" alt="Image of Yaromir">
-            <p>A risky 20 year old lectreido with the ability to run at <b>crazy</b> speed from birth.
-            <br>He has created his own weapons for the adventure: a <a href="thesemiradical-sword.png">sword</a> and a <a href="thesemiradical-blaster.png">blaster</a>.
-            <h3>Zinoviy</h3>
-            <img width="25%" class="frame" src="thesemiradical-zinoviy.png" alt="Image of Zinoviy">
-            <p>I can't say a lot about him. Just some mad human genius that wants to take over the world. He has ruined streets with his robots and other "garbage".
-            <br>I'm planning to improve description and design of this character.</p>
-        </div>
+            <main>
+                <section class="slop-section slop-center">
+                    <div class="slop-container">
+                        <div class="slop-pill slop-pill-shimmer">
+                            <span class="slop-dot slop-dot-purple"></span> Upcoming game · concept archive
+                        </div>
+                        
+                        <p class="slop-lead">A fast-paced 2D platformer about speed, rage, electricity, and one very determined lectreido.</p>
+                        <img class="game-image" src="thesemiradical-logo.png" alt="The Semiradical logo">
+                        <p class="slop-muted">It's not just another platformer — it's a <span class="slop-serif-emphasis">high-voltage escape route</span> through a world that wants Yaromir under control.</p>
+                        <div class="slop-row slop-row-center">
+                            <a class="slop-btn slop-btn-primary" href="#introduction">Explore the project →</a>
+                            <a class="slop-btn slop-btn-ghost" href="#track">Listen to the soundtrack</a>
+                        </div>
+                    </div>
+                </section>
 
-        <div>
-            <h2>Content</h2>
-            <img src="opticaldisk.gif" alt="Optical disk GIF-animation">
-            <h3>Example of the game</h3>
-            <img width="50%" class="frame" src="thesemiradical-screenshot.png" alt="The Semiradical example screenshot">
-            <h3 id="track">First track from the game - The First And Probably The Last Fight</h3>
-            <p>Creation date: 6 July 2025 (current version), 28 June 2025 (<a href="thesemiradical-trackoriginal.ogg">original</a>)</p>
-            <p>Description: This is the best track I've ever made. I'm talking about both the current and the original version.</p>
-            <audio controls src="thesemiradical-track.ogg"><a href="thesemiradical-track.ogg">Download</a></audio>
-            <h3 id="track2">Second track from the game - Green Fever</h3>
-            <p>Creation date: 21 August 2026</p>
-            <p>Release date: 22 August 2026</p>
-            <p>Description: Like "The First And Probably The Last Fight" and "Ultrabox beat in LMMS", this track is also one of the best I've ever made. This will be used in the first level in <a href="thesemiradical.html">The Semiradical</a>.</p>
-            <audio controls src="thesemiradical-track2.ogg"><a href="thesemiradical-track2.ogg">Download</a></audio>
-            <br>
-            <a href="https://youtu.be/ih9Cd1L_3TA">On YouTube</a>
-        </div>
+                <div class="slop-container">
+                    <div class="slop-alert slop-border-l-gradient">
+                        <span class="slop-dot slop-dot-cyan"></span>
+                        <div><strong>Development signal:</strong> The Semiradical is a large future project. This page is an evolving archive of its world, characters, and prototypes.</div>
+                    </div>
+                </div>
 
-        <div>
-            <h2>Development</h2>
-            <h3>Concept</h3>
-            <p>The concept originated a long ago, in 2022 year. It was about a dream game. The game's original name was "Project: Wetdarum", the game was originally set on a fictional planet named Wetdarum. The target visual style of the game is hand-drawn, but it originally was 16-bit pixel art.
-            <h3>Inspiration</h3>
-            <ul>
-                <li>Sonic The Hedgehog (main inspiration)</li>
-                <li>Pizza Tower (later inspiration)</li>
-            </ul>
-            <h3>Engine</h3>
-            <p>The game will use own engine, probably written in C language with SDL library instead of ready-made engines.</p>
-        </div>
+                <section class="slop-section-sm" id="introduction">
+                    <div class="slop-container">
+                        <div class="slop-bento">
+                            <article class="slop-card slop-bento-7 slop-border-l-purple">
+                                <span class="slop-badge slop-badge-ai">PROJECT BRIEF</span>
+                                <h2 class="slop-h2">A dangerous <span class="slop-underline slop-underline-cyan">run</span> for freedom.</h2>
+                                <p>The Semiradical is a game that I’m planning to work on after finishing other projects. You play as Yaromir, a risky 20-year-old lectreido who is fast enough to challenge an army of robots.</p>
+                                <p class="slop-muted">Drawings on this page are prototypes, not the final visual style.</p>
+                            </article>
+                            <article class="slop-card slop-bento-5 slop-card-beam">
+                                <div class="slop-icon-box slop-icon-cyan">⚡</div>
+                                <h3 class="slop-h3">Core energy</h3>
+                                <p class="slop-muted">Fast movement, nonlinear storytelling, and unique mechanics built around rage and electricity.</p>
+                                <span class="slop-status"><span class="slop-dot slop-dot-green"></span> Systems imagined</span>
+                            </article>
+                        </div>
+                    </div>
+                </section>
 
-        <h2 class="back"><a href="index.html">Back</a></h2>
+                <section class="slop-section-sm">
+                    <div class="slop-container">
+                        <div class="slop-row-between">
+                            <div>
+                                <span class="slop-badge slop-badge-popular">THE WORLD</span>
+                                <h2 class="slop-h2">General <span class="slop-serif-emphasis slop-text-gradient-hot">specification</span></h2>
+                            </div>
+                        </div>
+                        <div class="slop-grid-3 content-grid">
+                            <article class="slop-card slop-border-l-cyan">
+                                <h3 class="slop-h3">Genre</h3>
+                                <p>Fast-paced 2D platformer</p>
+                                <h3 class="slop-h3">Key features</h3>
+                                <div class="feature-list">
+                                    <div class="feature-item">
+                                        <span class="feature-icon" aria-hidden="true">⚡</span>
+                                        <span>Realistic level design</span>
+                                    </div>
+                                    <div class="feature-item">
+                                        <span class="feature-icon" aria-hidden="true">🚀</span>
+                                        <span>Nonlinear storyline</span>
+                                    </div>
+                                    <div class="feature-item">
+                                        <span class="feature-icon" aria-hidden="true">✨</span>
+                                        <span>Rage and electricity mechanics</span>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="slop-card slop-border-l-pink">
+                                <h3 class="slop-h3">Plot</h3>
+                                <p>Zinoviy is going to take over the world and enslave the whole lectreido race. Yaromir is very mad about this and decides to take risks for freedom.</p>
+                                <p>The game begins in Belarus in the first quarter of the 21st century.</p>
+                            </article>
+                            <article class="slop-card slop-border-l-emerald">
+                                <h3 class="slop-h3">Related project</h3>
+                                <p><a href="altradical.html">ALTRADICAL</a> shares Yaromir and other general ideas with The Semiradical, but it is based on the game and is not canon.</p>
+                            </article>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="slop-section-sm">
+                    <div class="slop-container">
+                        <span class="slop-badge slop-badge-cyan">CAST</span>
+                        <h2 class="slop-h2">Meet the <span class="slop-underline slop-underline-pink">resistance</span></h2>
+                        <div class="slop-grid-2">
+                            <article class="slop-card slop-border-l-purple">
+                                <img class="character-image" src="thesemiradical-yaromir.png" alt="Yaromir">
+                                <h3 class="slop-h3">Yaromir</h3>
+                                <p>A risky 20-year-old lectreido with the ability to run at <strong>crazy</strong> speed from birth. He created his own weapons for the adventure: a <a href="thesemiradical-sword.png">sword</a> and a <a href="thesemiradical-blaster.png">blaster</a>.</p>
+                            </article>
+                            <article class="slop-card slop-border-l-rose">
+                                <img class="character-image" src="thesemiradical-zinoviy.png" alt="Zinoviy">
+                                <h3 class="slop-h3">Zinoviy</h3>
+                                <p>A mad human genius who wants to take over the world. He has ruined streets with his robots and other “garbage”. His description and design are still in development.</p>
+                            </article>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="slop-section-sm">
+                    <div class="slop-container">
+                        <span class="slop-badge slop-badge-amber">MEDIA DROP</span>
+                        <h2 class="slop-h2">Playable <span class="slop-text-gradient">signals</span></h2>
+                        <div class="slop-grid-2">
+                            <article class="slop-card slop-card-beam slop-border-l-gradient">
+                                <img class="game-image" src="thesemiradical-screenshot.png" alt="The Semiradical gameplay screenshot">
+                                <h3 class="slop-h3">Example of the game</h3>
+                                <p class="slop-muted">An early glimpse at the game’s visual direction.</p>
+                            </article>
+                            <article class="slop-card slop-border-l-amber" id="track">
+                                <div class="slop-icon-box slop-icon-amber">♫</div>
+                                <h3 class="slop-h3">The First And Probably The Last Fight</h3>
+                                <p class="slop-mono">CURRENT VERSION · 06 JULY 2025</p>
+                                <p>This is the best track I’ve ever made. The <a href="thesemiradical-trackoriginal.ogg">original version</a> was created on 28 June 2025.</p>
+                                <audio controls src="thesemiradical-track.ogg"><a href="thesemiradical-track.ogg">Download</a></audio>
+                                <h3 class="slop-h3" id="track2">Green Fever</h3>
+                                <p class="slop-mono">RELEASED · 22 AUGUST 2026</p>
+                                <p>One of the best tracks I’ve made, planned for use in the first level.</p>
+                                <audio controls src="thesemiradical-track2.ogg"><a href="thesemiradical-track2.ogg">Download</a></audio>
+                                <a class="slop-btn slop-btn-ghost slop-btn-sm" href="https://youtu.be/ih9Cd1L_3TA">Watch on YouTube ↗</a>
+                            </article>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="slop-section-sm">
+                    <div class="slop-container">
+                        <div class="slop-grid-2">
+                            <article class="slop-card slop-border-l-indigo">
+                                <h2 class="slop-h2">Development <span class="slop-serif-emphasis">log</span></h2>
+                                <h3 class="slop-h3">Concept</h3>
+                                <p>The concept originated with a dream game in 2022. Its original name was “Project: Wetdarum”, set on a fictional planet. The target visual style is hand-drawn, though it began as 16-bit pixel art.</p>
+                                <h3 class="slop-h3">Inspiration</h3>
+                                <ul>
+                                    <li>Sonic The Hedgehog</li>
+                                    <li>Pizza Tower</li>
+                                </ul>
+                            </article>
+                            <article class="slop-card slop-border-l-emerald">
+                                <h2 class="slop-h2">Engine <span class="slop-text-gradient-hot">forecast</span></h2>
+                                <p>The game will use its own engine, probably written in C with the SDL library instead of a ready-made engine.</p>
+                                <div class="slop-progress"><div class="slop-progress-bar" style="width: 18%"></div></div>
+                                <p class="slop-muted slop-mono">CONCEPT PHASE · 18% UNVERIFIED</p>
+                            </article>
+                        </div>
+                    </div>
+                </section>
+
+            </main>
+
+            <footer class="slop-section-sm slop-center">
+                <a class="slop-btn slop-btn-rainbow" href="index.html">← Back to Yarix Web</a>
+            </footer>
+        </div>
+        <script src="dist/slopstrap.js" defer></script>
     </body>
 </html>
